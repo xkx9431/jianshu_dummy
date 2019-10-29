@@ -49,6 +49,7 @@ export const SearchWrapper = styled.div`
 	position: relative;
 	float: left;
 	.iconfont {
+		color:#fff;
 		position: absolute;
 		right: 5px;
 		bottom: 5px;
@@ -85,6 +86,7 @@ export const Addition = styled.div`
 	height: 56px;
 `;
 
+
 export const Button = styled.div`
 	float: right;
 	margin-top: 9px;
@@ -95,10 +97,10 @@ export const Button = styled.div`
 	border: 1px solid #ec6149;
 	font-siz: 14px;
 	&.reg {
-		color: #ec6149;
-	}
-	&.writting {
 		color: #fff;
 		background: #ec6149;
+	}
+	&.writing {
+		color: #ec6149;
 	}
 `

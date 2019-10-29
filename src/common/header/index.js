@@ -55,11 +55,11 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		focused: state.header.get('focused') 
+		focused: state.getIn(['header','focused']) 
 	}
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
 	return {
 		handleInputFocus() {
 			dispatch(actionCreators.searchFocus());
@@ -70,4 +70,4 @@ const mapDispathToProps = (dispatch) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -56,9 +56,9 @@ export const SearchWrapper = styled.div`
 		line-height: 30px;
 		border-radius: 15px;
 		text-align: center;
-		&.focused{
-			background:#777;
-			color:#fff;
+		&.focused {
+			background: #777;
+			color: #fff;
 		}
 	}
 `;
@@ -66,9 +66,9 @@ export const SearchWrapper = styled.div`
 export const NavSearch = styled.input.attrs({
 	placeholder: '搜索'
 })`
-	width: 160p;
+	width: 160px;
 	height: 38px;
-	padding: 0 20px;
+	padding: 0 30px 0 20px;
 	margin-top: 9px;
 	margin-left: 20px;
 	box-sizing: border-box;
@@ -77,11 +77,12 @@ export const NavSearch = styled.input.attrs({
 	border-radius: 19px;
 	background: #eee;
 	font-size: 14px;
+	color: #666;
 	&::placeholder {
 		color: #999;
 	}
-	&.focused{
-		width:240px;
+	&.focused {
+		width: 240px;
 	}
 	&.slide-enter {
 		transition: all .2s ease-out;
@@ -104,7 +105,6 @@ export const Addition = styled.div`
 	height: 56px;
 `;
 
-
 export const Button = styled.div`
 	float: right;
 	margin-top: 9px;
@@ -114,14 +114,11 @@ export const Button = styled.div`
 	border-radius: 19px;
 	border: 1px solid #ec6149;
 	font-siz: 14px;
-	.iconfont{
-		margin-right:5px;
-	}
 	&.reg {
-		color: #fff;
-		background: #ec6149;
+		color: #ec6149;
 	}
 	&.writing {
-		color: #ec6149;
+		color: #fff;
+		background: #ec6149;
 	}
 `

@@ -5,7 +5,7 @@ const defaultState = fromJS({
 	focused: false,
 	list: [],
 	page:1,
-	totalPage:1,
+	totalPage:10,
 	mouseIn:false
 });
 
@@ -21,6 +21,8 @@ export default (state = defaultState, action) => {
 			return state.set('mouseIn', true);
 		case constants.MOUSE_LEAVE:
 			return state.set('mouseIn', false);
+		case constants.SWITCH_ITEMS:
+			return state.set('page', action.page);
 		default:
 			return state;
 	}

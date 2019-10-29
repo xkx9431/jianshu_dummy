@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
+import { fromJS } from 'immutable'
 import {
 	HeaderWrapper,
 	Logo,
@@ -54,7 +55,7 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		focused: state.header.focused
+		focused: state.header.get('focused') 
 	}
 }
 

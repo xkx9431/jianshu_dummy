@@ -40,8 +40,13 @@ class Header extends Component {
 					<SearchInfoTitle>
 						热门搜索
 						<SearchInfoSwitch
-							onClick = {() => handleChangePage( page, totalPage )}
+							onClick = {() => handleChangePage( page, totalPage, this.spinIcon)}
 						>
+						<i 
+						className="iconfont spin"
+						ref = {(icon) =>{this.spinIcon = icon}}
+						>&#xe851;
+						</i>
 						换一批
 						</SearchInfoSwitch>
 					</SearchInfoTitle>
@@ -79,15 +84,15 @@ class Header extends Component {
 								onBlur={handleInputBlur}
 							></NavSearch>
 						</CSSTransition>
-						<i className={focused ? 'focused iconfont': 'iconfont'}>
-							&#xe614;
+						<i className={focused ? 'focused iconfont zoom': 'iconfont zoom'}>
+							&#xe63d;
 						</i>
 						{this.getListArea()}
 					</SearchWrapper>
 				</Nav>
 				<Addition>
 					<Button className='writing'>
-						<i className="iconfont">&#xe615;</i>
+						<i className="iconfont">&#xe678;</i>
 						写文章
 					</Button>
 					<Button className='reg'>注册</Button>
@@ -122,7 +127,14 @@ const mapDispatchToProps = (dispatch) => {
 		handleMouseLeave() {
 			dispatch(actionCreators.mouseLeave())
 		},
-		handleChangePage(page,totalPage) {
+		handleChangePage(page,totalPage, spin) {
+			let originAngel = spin.style.transform.replace(/[^0-9]/ig,'') ;
+			if (originAngel){
+				originAngel = parseInt(originAngel,10)
+			}else{
+					originAngel = 0;
+				}
+			spin.style.transform = 'rotate(' +( originAngel + 360 ) +'deg)';
 			if(page< totalPage) {
 				dispatch(actionCreators.switchItems(page+1));
 			} else {

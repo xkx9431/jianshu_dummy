@@ -35,7 +35,7 @@ export const TopicItem = styled.div`
 	line-height: 32px;
 	margin-left: 18px;
 	margin-bottom: 18px;
-	padding-right: 10px
+	padding-right: 10px;
 	background: #f7f7f7;
 	font-size: 14px;
 	color: #000;
@@ -97,6 +97,24 @@ export const WriterWrapper = styled.div`
 	border: 1px solid #dcdcdc;
 	border-radius: 3px;
 	height: 300px;
-	line-height: 300px;
-	text-align: center;
+	overflow:hidden;
+`;
+
+export const WriterItem = styled.div`
+	width: 278px;
+	margin-top: 10px;
+	height: 40px;
+	line-height:40px;
+	margin-right: 10px;
+
+	.writer-pic{
+		display: block;
+		margin-left:10px;
+		margin-right:10px;
+		width: 40px;
+		height: 40px;
+		border: 1px solid #ddd;
+		border-radius: 50%;
+		float: left;
+	}
 `;

@@ -94,7 +94,6 @@ export const RecommendItem = styled.div`
 
 export const WriterWrapper = styled.div`
 	width: 278px;
-	border: 1px solid #dcdcdc;
 	border-radius: 3px;
 	height: 300px;
 	overflow:hidden;
@@ -107,7 +106,6 @@ export const WriterItem = styled.div`
 	line-height:40px;
 	margin-right: 10px;
 	padding-bottom:5px;
-	border-bottom: 1px solid #dcdcdc;
 
 	.writer-pic{
 		display: block;
@@ -134,7 +132,7 @@ export const WriterInfo =	styled.div`
 	}
 	.detail {
 		line-height: 20px;
-		font-size: 13px;
+		font-size: 10px;
 		color: #999;
 		line-alias: center;
 		opacity:0.6;

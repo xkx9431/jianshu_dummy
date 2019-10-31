@@ -1,20 +1,42 @@
 import React, { Component } from 'react';
 import { WriterWrapper, WriterItem, WriterInfo } from '../style';
+import { connect } from 'react-redux';
 
 class Writer extends Component {
 	render() {
+		const {lists } = this.props
 		return (
 			<WriterWrapper>
-				<WriterItem>
-				<img alt ='' className= 'writer-pic' src="//upload.jianshu.io/users/upload_avatars/14715425/e0668349-8c75-43db-8a9d-c388e5f00d0d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"></img>
-				<WriterInfo>
-					<p className='title'>简书钻首席小管家</p>
-					<p className='detail'>写了4846428字</p>
-				</WriterInfo>
-				</WriterItem>
+				{
+					lists.map((item) => {
+						return (
+							<WriterItem key={item.get('id')}>
+								<img alt='' className='writer-pic' src={item.get('imgUrl')} />
+								<WriterInfo>
+									<p className='title'>{item.get('writerName')}</p>
+									<p className='detail'>{'一共写了'+ Math.ceil(Math.random()*1000000) +'字*获得了'+ Math.ceil(Math.random()*1000000)+'赞' }</p>
+								</WriterInfo>
+							</WriterItem>
+						);
+					})
+				}
 			</WriterWrapper>
 		)
 	}
 }
+const mapState = (state) => ({
+	lists: state.getIn(['home', 'writerList'])
+})
+export default connect( mapState )(Writer);
 
-export default Writer;
+// lists.map((item)=>{
+// 	return{
+// 		<WriterItem key={item.get('id')}>
+// 		<img alt ='' className= 'writer-pic' src={item.get(imgItem)}}></img>
+// 		<WriterInfo>
+// 			<p className='title'>简书钻首席小管家</p>
+// 			<p className='detail'>写了4846428字 * 获得了1648赞</p>
+// 		</WriterInfo>
+// 		</WriterItem>
+// 	}
+// })

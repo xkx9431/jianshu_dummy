@@ -3,7 +3,8 @@ import { fromJS } from 'immutable';
 const defaultState = fromJS({
 	topicList: [],
 	articleList: [],
-	recommendList: []
+	recommendList: [],
+	writerList:[]
 });
 
 export default (state = defaultState, action) => {
@@ -12,7 +13,8 @@ export default (state = defaultState, action) => {
 			return state.merge({
 				topicList: fromJS(action.topicList),
 				articleList: fromJS(action.articleList),
-				recommendList: fromJS(action.recommendList)
+				recommendList: fromJS(action.recommendList),
+				writerList: fromJS(action.writerList),
 			})
 		default:
 			return state;

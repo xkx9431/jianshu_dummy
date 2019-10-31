@@ -105,6 +105,8 @@ export const SearchInfo = styled.div`
 	width: 240px;
 	padding: 0 20px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+	background:rgb(255, 255, 255);
+	color:#000;
 `;
 
 export const SearchInfoTitle = styled.div`

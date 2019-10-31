@@ -106,6 +106,8 @@ export const WriterItem = styled.div`
 	height: 40px;
 	line-height:40px;
 	margin-right: 10px;
+	padding-bottom:5px;
+	border-bottom: 1px solid #dcdcdc;
 
 	.writer-pic{
 		display: block;
@@ -116,5 +118,25 @@ export const WriterItem = styled.div`
 		border: 1px solid #ddd;
 		border-radius: 50%;
 		float: left;
+	}
+`;
+
+export const WriterInfo =	styled.div`
+	width: 200px;
+	float: left;
+	margin-left: 10px;
+	margin-top:5px;
+	.title {
+		line-height: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #333;
+	}
+	.detail {
+		line-height: 20px;
+		font-size: 13px;
+		color: #999;
+		line-alias: center;
+		opacity:0.6;
 	}
 `;

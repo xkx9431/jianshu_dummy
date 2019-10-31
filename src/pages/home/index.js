@@ -14,7 +14,7 @@ class Home extends Component {
         return(
             <HomeWrapper>
                 <HomeLeft>
-                    <img className='homePic' src= "https://upload-images.jianshu.io/upload_images/15098471-d4d705c796d8f6cf.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"/>
+                    <img className='homePic' alt="homeTitle" src= "https://upload-images.jianshu.io/upload_images/15098471-d4d705c796d8f6cf.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"/>
                     <Topic/>
                     <List />
                 </HomeLeft>

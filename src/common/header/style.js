@@ -105,8 +105,7 @@ export const SearchInfo = styled.div`
 	width: 240px;
 	padding: 0 20px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .2);
-	background:rgb(255, 255, 255);
-	color:#000;
+	background: #fff;
 `;
 
 export const SearchInfoTitle = styled.div`
@@ -120,14 +119,14 @@ export const SearchInfoTitle = styled.div`
 export const SearchInfoSwitch = styled.span`
 	float: right;
 	font-size: 13px;
-	.spin{
-		display:block;
-		float:left;
-		font-size:12px;
-		margin-right:2px;
-		transition: all 0.2s ease-in;
-		transform:rotate(0deg);
-		transform:center center;
+	cursor: pointer;
+	.spin {
+		display: block;
+		float: left;
+		font-size: 12px;
+		margin-right: 2px;
+		transition: all .2s ease-in;
+		transform-origin: center center;
 	}
 `;
 
@@ -164,13 +163,10 @@ export const Button = styled.div`
 	border-radius: 19px;
 	border: 1px solid #ec6149;
 	font-siz: 14px;
-	.iconfont{
-		margin-right:5px;
-	}
 	&.reg {
 		color: #ec6149;
 	}
-	&.writing {
+	&.writting {
 		color: #fff;
 		background: #ec6149;
 	}

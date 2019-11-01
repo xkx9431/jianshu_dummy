@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable';
-import * as constants from './contants'
+import * as constants from './constants'
 
 const defaultState = fromJS({
 	topicList: [],
@@ -17,6 +17,8 @@ export default (state = defaultState, action) => {
 				recommendList: fromJS(action.recommendList),
 				writerList: fromJS(action.writerList),
 			})
+		case constants.GET_MORE_INFO:
+			return state.set('articleList',state.get('articleList').concat(action.list))
 		default:
 			return state;
 	}

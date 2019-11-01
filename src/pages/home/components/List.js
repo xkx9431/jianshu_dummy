@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ListItem, ListInfo,LoadMore } from '../style';
 import { connect } from 'react-redux';
 import * as actionCreators from '../store/actionCreators'
+import { Link } from 'react-router-dom';
 
 class List extends Component {
 	render() {
@@ -9,15 +10,17 @@ class List extends Component {
 		return (
 			<div>
 				{
-					list.map((item) => {
+					list.map((item, index) => {
 						return (
-							<ListItem key={item.get('id')}>
-								<img alt='' className='pic' src={item.get('imgUrl')} />
-								<ListInfo>
-									<h3 className='title'>{item.get('title')}</h3>
-									<p className='desc'>{item.get('desc')}</p>
-								</ListInfo>
-							</ListItem>
+							<Link key={ index } to='/detail'>
+								<ListItem >
+									<img alt='' className='pic' src={item.get('imgUrl')} />
+									<ListInfo>
+										<h3 className='title'>{item.get('title')}</h3>
+										<p className='desc'>{item.get('desc')}</p>
+									</ListInfo>
+								</ListItem>
+							</Link>
 						);
 					})
 				}

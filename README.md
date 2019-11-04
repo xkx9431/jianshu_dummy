@@ -1,4 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was react-demo with [Create React App](https://github.com/facebook/create-react-app).
+
+using 
+
+`   "axios": "^0.19.0",
+    "immutable": "^4.0.0-rc.12",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^4.3.0",
+    "redux": "^4.0.4",
+    "redux-immutable": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^3.3.2"
+`
 
 ## Available Scripts
 
